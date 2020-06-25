@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7223621545092752006
+--- !u!114 &-1847008009520630316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,6 +116,6 @@ MonoBehaviour:
   AnimationNames:
   - Default
   Database:
-  - {fileID: -7223621545092752006}
+  - {fileID: -1847008009520630316}
   DatabaseName: Uncategorized
   DataType: 2

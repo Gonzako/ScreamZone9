@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f12057be7048e782d874eca61d9ada, type: 3}
   m_Name: ThemesSettings
   m_EditorClassIdentifier: 
-  database: {fileID: 11400000, guid: b4faee20ad69e4f4c855f3a3a36987bb, type: 2}
+  database: {fileID: 11400000, guid: ad141746f0e483940a8d237250a00bba, type: 2}
   AutoSave: 1

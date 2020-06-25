@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4320b6044dba483bb727836a541819cb, type: 3}
   m_Name: UIPopupSettings
   m_EditorClassIdentifier: 
-  database: {fileID: 11400000, guid: 5426be25663272448b15996b2b7147bf, type: 2}
+  database: {fileID: 11400000, guid: 9febe173551e96a4fa3ea0019f3f0e58, type: 2}
   DisplayTarget: 0
   AddToPopupQueue: 1
   AutoHideAfterShow: 0
