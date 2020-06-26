@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f135a61cd341c2d46b34bedac459d6d1, type: 3}
+  m_Name: O2Pick
+  m_EditorClassIdentifier: 
+  possibleClips:
+  - {fileID: 8300000, guid: 7b0aeb66fba00bc4ab4020742f338078, type: 3}
+  - {fileID: 8300000, guid: e6ee8d8470e7c5744a383b15dfb4cbe1, type: 3}
+  - {fileID: 8300000, guid: f828a310a1d9b4d498c8d8ea49cdefaa, type: 3}
+  - {fileID: 8300000, guid: 75b5781a508145f4eb26b274c733707e, type: 3}
+  - {fileID: 8300000, guid: 97d06dae7df2cd44197b22aea01d5266, type: 3}

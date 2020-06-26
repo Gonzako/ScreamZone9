@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f135a61cd341c2d46b34bedac459d6d1, type: 3}
+  m_Name: O2Drop
+  m_EditorClassIdentifier: 
+  possibleClips:
+  - {fileID: 8300000, guid: d32d535e6989044498e7443206ee05e8, type: 3}
+  - {fileID: 8300000, guid: 8d2c873f194aed142940e7ffd3a1bc31, type: 3}
+  - {fileID: 8300000, guid: 0bea29c34e1f51446985a67f444cc34e, type: 3}
+  - {fileID: 8300000, guid: a19faad2c3ff65442bf451082ba2ca76, type: 3}
