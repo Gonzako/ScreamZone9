@@ -19,7 +19,7 @@ public class playerSystem : MonoBehaviour
     public Transform PlayerVisual { get { return playerVisual; } private set { playerVisual = value; } }
     public Transform PlayerLogic { get { return playerLogic; } private set { playerLogic = value; } }
 
-
+    public bool PickedUpSomething { get { return pickedUpSomething; } }
 
     private bool pickedUpSomething = false;
     private List<O2PickupLogic> o2Pickups = new List<O2PickupLogic>();
