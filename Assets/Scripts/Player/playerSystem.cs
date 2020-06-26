@@ -32,7 +32,7 @@ public class playerSystem : MonoBehaviour
 
     public void dropEverythingOff(Transform t)
     {
-        if (pickedUpSomething)
+        if (!pickedUpSomething)
         {
             return;
         }
