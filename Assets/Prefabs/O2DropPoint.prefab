@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 8684848396547336855}
   - component: {fileID: 8684848396547336854}
   - component: {fileID: 8684848396547336849}
+  - component: {fileID: 8684848396685245831}
   m_Layer: 12
   m_Name: O2DropPoint
   m_TagString: Untagged
@@ -350,3 +351,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8684848396685245831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8684848396547336853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfa685340071f1418327e98d93110c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

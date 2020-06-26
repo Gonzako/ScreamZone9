@@ -30,6 +30,7 @@ public class O2PickupLogic : MonoBehaviour
             {
                 pickedUp = true;
                 playerSystem.instance.addPickup(this);
+                onPlayerPickedUp.Invoke();
                 getPickedUp(other.transform);
             }
         }
@@ -42,5 +43,10 @@ public class O2PickupLogic : MonoBehaviour
         transform.DOLocalMove(Vector3.zero, pickupTime).SetEase(Ease.OutQuart);
 
 
+    }
+
+    private void OnDisable()
+    {
+        gamePooler.instance.addO2Pickup(this);
     }
 }

@@ -18,5 +18,8 @@ public class O2DropLogic : MonoBehaviour
         }
     }
 
-
+    private void OnDisable()
+    {
+        gamePooler.instance.addO2Drop(this);
+    }
 }
