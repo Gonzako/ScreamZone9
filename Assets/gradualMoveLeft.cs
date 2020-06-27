@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class gradualMoveLeft : MonoBehaviour
 {
-    public const float speed = 1f;
+    public float speed = 1f;
 
     public static float screenHalfWidth = 666f;
 
+    private SpriteRenderer rend;
 
     private void Start()
     {
@@ -17,12 +18,16 @@ public class gradualMoveLeft : MonoBehaviour
             screenHalfWidth = cam.aspect * cam.orthographicSize;
 
         }
+        rend = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
         transform.position += Vector3.left * speed * Time.deltaTime;
-        if (transform.position.x < -(screenHalfWidth+2))
+        float extents = 0;
+        if (rend != null)
+            extents = rend.bounds.extents.x;
+        if (transform.position.x < -(screenHalfWidth+extents))
         {
             Debug.Log(gameObject.name + " has been deactivated and added to the pool");
             gameObject.SetActive(false);
