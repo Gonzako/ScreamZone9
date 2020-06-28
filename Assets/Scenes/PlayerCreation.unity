@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 1342298419}
   - component: {fileID: 1342298421}
   - component: {fileID: 1342298420}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,9 +750,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 1
+      minMaxState: 3
+      scalar: 0.8
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -803,7 +803,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -856,7 +856,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -5280,7 +5280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1416782359
 Transform:
   m_ObjectHideFlags: 0
@@ -5620,6 +5620,7 @@ GameObject:
   - component: {fileID: 1984864652}
   - component: {fileID: 1984864651}
   - component: {fileID: 1984864650}
+  - component: {fileID: 1984864653}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5692,6 +5693,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1984864653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984864649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 96
+  m_RefResolutionX: 1280
+  m_RefResolutionY: 960
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &1989252877
 GameObject:
   m_ObjectHideFlags: 0
