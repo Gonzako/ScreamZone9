@@ -7,6 +7,9 @@ using DG.Tweening;
 public class O2PickupLogic : MonoBehaviour
 {
 
+    //[SerializeField]
+    public ParticleSystem mainBody;
+
     public UnityEngine.Events.UnityEvent onPlayerPickedUp;
     public UnityEngine.Events.UnityEvent onPlayerDropOff;
     public UnityEngine.Events.UnityEvent onWallOfDeath;
@@ -48,5 +51,10 @@ public class O2PickupLogic : MonoBehaviour
     private void OnDisable()
     {
         gamePooler.instance.addO2Pickup(this);
+    }
+
+    private void OnEnable()
+    {
+        mainBody.Play();
     }
 }

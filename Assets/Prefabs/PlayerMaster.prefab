@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5407834821226498567}
   - component: {fileID: 1860552733}
+  - component: {fileID: 5407834822448244136}
+  - component: {fileID: 5407834822448244135}
   m_Layer: 0
   m_Name: PlayerMaster
   m_TagString: Untagged
@@ -45,8 +47,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0abaa996a1c25cb459a81592e4865d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onAnyO2Picup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1562551080}
+        m_MethodName: Brighten
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAnyO2Drop:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1562551080}
+        m_MethodName: Darken
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   playerVisual: {fileID: 5407834821652704399}
   playerLogic: {fileID: 5407834821918569105}
+--- !u!95 &5407834822448244136
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5407834821226498564}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0457b0d09305d984282241dec44e7cfd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5407834822448244135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5407834821226498564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84318848299b704ab0527ff36c2e043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropPrefab: {fileID: 8684848396547336849, guid: e8bc035ff90d2de47a9e6db172d03373,
+    type: 3}
+  pickupPrefab: {fileID: 235106935964010520, guid: 2fa694864a89edf46ac9ebbab76accc4,
+    type: 3}
 --- !u!1 &5407834821652704396
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,6 +125,7 @@ GameObject:
   - component: {fileID: 104344015}
   - component: {fileID: 104344017}
   - component: {fileID: 104344016}
+  - component: {fileID: 1562551080}
   m_Layer: 9
   m_Name: PlayerVisuals
   m_TagString: Untagged
@@ -101,7 +167,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &104344015
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -155,10 +221,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1019891351
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eb5b293700185344e9c5653bb0e49c0c, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8546c366b026c25449d893d03e830c3d, type: 3}
+  m_Color: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -187,6 +253,20 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.25
   m_MaxDistanceOnly: 1
+--- !u!114 &1562551080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5407834821652704396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d138c389426f8d499a3ea9d988117d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorAsDark: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
+  colorAsBright: {r: 1, g: 1, b: 1, a: 0.9490196}
 --- !u!1 &5407834821918569110
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,8 +278,8 @@ GameObject:
   - component: {fileID: 5407834821918569105}
   - component: {fileID: 5407834822448244137}
   - component: {fileID: 5407834822448244138}
-  - component: {fileID: 5407834822448244135}
-  - component: {fileID: 5407834822448244136}
+  - component: {fileID: 3273932183186930927}
+  - component: {fileID: 3829524346637872477}
   m_Layer: 8
   m_Name: PlayerLogic
   m_TagString: Untagged
@@ -258,7 +338,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &5407834822448244135
+--- !u!114 &3273932183186930927
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,7 +366,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5407834822448244136}
+      - m_Target: {fileID: 3829524346637872477}
         m_MethodName: OnMovement
         m_Mode: 0
         m_Arguments:
@@ -304,7 +384,7 @@ MonoBehaviour:
   m_DefaultActionMap: In-Game
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &5407834822448244136
+--- !u!114 &3829524346637872477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,4 +396,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f533545a10276b24a8e92271f801130c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4

@@ -6,20 +6,32 @@ using UnityEngine;
 
 public class O2DropLogic : MonoBehaviour
 {
-
+    public bool isCancer = false;
     public UnityEngine.Events.UnityEvent OnThisDropOff;
+
+    private ParticleSystem mainBody;
+
+    private void Start()
+    {
+        
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.transform == playerSystem.instance.PlayerVisual && playerSystem.instance.PickedUpSomething)
         {
-            playerSystem.instance.dropEverythingOff(transform);
+            var result = playerSystem.instance.dropEverythingOff(transform);
+            
+            foreach(O2PickupLogic n in result)
+            {
+                n.mainBody.Stop();
+            }
             OnThisDropOff.Invoke();
         }
     }
 
     private void OnDisable()
     {
-        gamePooler.instance.addO2Drop(this);
+        if(!isCancer)gamePooler.instance.addO2Drop(this);
     }
 }

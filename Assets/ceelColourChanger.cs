@@ -9,7 +9,7 @@ public class ceelColourChanger : MonoBehaviour
     SpriteRenderer spr;
 
     [SerializeField]
-    private Color colorAsDark, colorAsBright;
+    private Color colorAsDark = Color.black, colorAsBright = Color.white;
 
     private void Start()
     {
