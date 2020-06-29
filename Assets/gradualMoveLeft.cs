@@ -14,6 +14,8 @@ public class gradualMoveLeft : MonoBehaviour
 
     private SpriteRenderer rend;
 
+    public float Speed { set { speed = value; } }
+
     private void Start()
     {
         if(screenHalfWidth == 666)
@@ -24,6 +26,8 @@ public class gradualMoveLeft : MonoBehaviour
         }
         rend = GetComponent<SpriteRenderer>();
     }
+
+
 
     private void Update()
     {
