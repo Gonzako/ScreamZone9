@@ -58,3 +58,5 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Assets/Plugin/Doozy/Editor/Internal/ProcessorsSettings.asset
+Assets/Plugin/Doozy/Engine/Resources/DoozySettings.asset
