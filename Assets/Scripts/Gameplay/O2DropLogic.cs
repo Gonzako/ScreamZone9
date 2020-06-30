@@ -8,7 +8,7 @@ public class O2DropLogic : MonoBehaviour
 {
     public bool isCancer = false;
     public UnityEngine.Events.UnityEvent OnThisDropOff;
-
+    public UnityEngine.Events.UnityEvent OnEnableEvent;
     private ParticleSystem mainBody;
 
     private void Start()
@@ -28,6 +28,12 @@ public class O2DropLogic : MonoBehaviour
             }
             OnThisDropOff.Invoke();
         }
+    }
+
+    private void OnEnable()
+    {
+        GetComponent<BoxCollider2D>().enabled = true;
+        OnEnableEvent.Invoke();
     }
 
     private void OnDisable()
