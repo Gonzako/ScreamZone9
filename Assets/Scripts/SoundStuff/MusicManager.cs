@@ -38,9 +38,10 @@ public class MusicManager : MonoBehaviour
             stop = false;
             StopAll();
         }
-        if (begin && !part1_audio.isPlaying)//starting the music. If begin is hit
+        if (begin)//starting the music. If begin is hit
         {
             begin = false;
+            StopAll();
             part1_audio.Play();
             part1_playing = true;
         }
