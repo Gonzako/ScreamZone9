@@ -28,7 +28,6 @@ public class MusicManager : MonoBehaviour
     [SerializeField]
     private float transitionTime = 1 / 6f;
 
-    private bool part1_playing, part2_playing; //music state bools Gonz: These you have lost their usefulness
     private bool keepLooping = true;
     // Update is called once per frame
 
@@ -45,8 +44,6 @@ public class MusicManager : MonoBehaviour
         part2_tense_audio.Stop();
 
         part2_tense_play = false;
-        part1_playing = false;
-        part2_playing = false;
 
     }
 
@@ -54,6 +51,7 @@ public class MusicManager : MonoBehaviour
     public void startMusic()
     {
         part1_audio.Play();
+        part1_audio.volume = 1.0f;
         StartCoroutine(startPart2Delayed());
     }
 

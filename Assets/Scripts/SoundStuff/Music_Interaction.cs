@@ -47,5 +47,7 @@ public class Music_Interaction : MonoBehaviour
         music_manager.StopAll();
         stop.interactable = false;
         start.interactable = true;
+        ease.gameObject.SetActive(false);
+        tense.gameObject.SetActive(false);
     }
 }
