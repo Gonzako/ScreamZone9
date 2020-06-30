@@ -22,7 +22,6 @@ public class MusicManager : MonoBehaviour
 
 
     public bool begin, part2_tense_play, stop;
-
     public static MusicManager instance;
 
     [SerializeField]
@@ -139,8 +138,8 @@ public class MusicManager : MonoBehaviour
     }
     private IEnumerator startPart2Delayed()
     {
-        yield return new WaitForSeconds(part1_audio.clip.length - 0.1f);
-        volumeTransition(part1_audio, part2_audio, 0.1f);
+        yield return new WaitForSeconds(part1_audio.clip.length - 7.15f);
+        volumeTransition(part1_audio, part2_audio, 7.1f);
         part2_audio.Play();
         part2_tense_audio.Play();
         part2_tense_audio.volume = 0;
