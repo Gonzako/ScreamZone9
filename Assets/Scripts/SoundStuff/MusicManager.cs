@@ -5,23 +5,39 @@ using UnityEngine;
 /// <summary>
 /// Music manager by Bharat. 
 /// 
-/// Interact with the music manager via the booleans: 'begin' and 'part2_tense_play'
+/// Interact with the music manager via the booleans: 'begin', 'stop', and 'part2_tense_play'
 /// 
-/// Start the music by setting 'begin' to true. Then Part 1 of the track will start playing.
+/// Start the music by setting 'begin' to true (treat it like a button). Then Part 1 of the track will start playing.
 /// During part 2, when the virus comes close, set 'part2_tense_play' to true. This will have the music smoothly transition to the tense track
 /// Set 'part2_tense_play' to false once the player is away from the virus
+/// If you want to stop the music, simply set 'stop' to true (Like 'begin', treat it like a button)
 /// </summary>
 public class MusicManager : MonoBehaviour
 {
     public AudioSource part1_audio, part2_audio, part2_tense_audio;
 
-    public bool begin, part2_tense_play;
+    public bool begin, part2_tense_play, stop;
 
     private bool part1_playing, part2_playing; //music state bools
     // Update is called once per frame
+    private void StopAll()
+    {
+        part1_audio.Stop();
+        part2_audio.Stop();
+        part2_tense_audio.Stop();
+
+        part2_tense_play = false;
+        part1_playing = false;
+        part2_playing = false;
+
+    }
     void Update()
     {
-
+        if (stop)
+        {
+            stop = false;
+            StopAll();
+        }
         if (begin && !part1_audio.isPlaying)//starting the music. If begin is hit
         {
             begin = false;
