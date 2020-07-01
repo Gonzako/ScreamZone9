@@ -41,7 +41,10 @@ public class gamePooler : MonoBehaviour
     {
         O2PickupLogic result;
         if (o2Pickups.Count > 0)
-            result = o2Pickups.Dequeue();
+        {
+            result = o2Pickups.Peek();
+            o2Pickups.Dequeue();
+        }
         else
             result = Instantiate(pickupPrefab);
         result.transform.parent = null;

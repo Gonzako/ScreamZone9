@@ -6,8 +6,9 @@ public class playerSystem : MonoBehaviour
 {
 
     public static playerSystem instance;
-    
-    
+
+    public UnityEngine.Events.UnityEvent onAnyO2Picup;
+    public UnityEngine.Events.UnityEvent onAnyO2Drop;
 
 
     [SerializeField]
@@ -27,15 +28,18 @@ public class playerSystem : MonoBehaviour
     public void addPickup(O2PickupLogic t)
     {
         pickedUpSomething = true;
+        onAnyO2Picup.Invoke();
         o2Pickups.Add(t);
     }
 
-    public void dropEverythingOff(Transform t)
+    public List<O2PickupLogic> dropEverythingOff(Transform t)
     {
         if (!pickedUpSomething)
         {
-            return;
+            return null;
         }
+        var result = new List<O2PickupLogic>();
+        onAnyO2Drop.Invoke();
         pickedUpSomething = false;
         for (int i = 0; i < o2Pickups.Count; i++)
         {
@@ -44,7 +48,10 @@ public class playerSystem : MonoBehaviour
             current.getPickedUp(t);
             current.pickedUp = false;
             current.onPlayerDropOff.Invoke();
+            result.Add(current);
         }
+
+        return result;
 
     }
 
