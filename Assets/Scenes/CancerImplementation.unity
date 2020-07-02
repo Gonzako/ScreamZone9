@@ -367,12 +367,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 10}
   m_EdgeRadius: 0
---- !u!198 &1595430641 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 235106935038562931, guid: 2fa694864a89edf46ac9ebbab76accc4,
-    type: 3}
-  m_PrefabInstance: {fileID: 148552347}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1660051166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5266,11 +5260,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1975852980129818581, guid: 04f3e53c25851ab44a692edc098ce91e,
-        type: 3}
-      propertyPath: onAnyColorChangeFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1595430641}
+    - target: {fileID: 904163169, guid: 04f3e53c25851ab44a692edc098ce91e, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5820454935261786344, guid: 04f3e53c25851ab44a692edc098ce91e,
         type: 3}
       propertyPath: m_Name

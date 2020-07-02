@@ -35,7 +35,7 @@ public class gradualMoveLeft : MonoBehaviour
         float extents = 2;
         if (rend != null)
             extents = rend.bounds.extents.x;
-        if (transform.position.x < -(screenHalfWidth+extents))
+        if (transform.position.x < -(screenHalfWidth+extents+2f))
         {
             if(!getUnityEventInstead)
                 gameObject.SetActive(false);
