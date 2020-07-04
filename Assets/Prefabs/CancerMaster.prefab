@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433295047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.89, y: 0, z: 0}
+  m_LocalPosition: {x: -4.93, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6464543133808478517}
@@ -2129,9 +2129,9 @@ ParticleSystem:
     enabled: 1
     x:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
+      minMaxState: 3
+      scalar: 80
+      minScalar: -80
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2182,7 +2182,7 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -2235,7 +2235,7 @@ ParticleSystem:
         m_RotationOrder: 4
     z:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -19030,6 +19030,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6464543133051132546}
   - component: {fileID: 6464543133051132547}
+  - component: {fileID: 580366610}
+  - component: {fileID: 576791479344301658}
+  - component: {fileID: 580366611}
   m_Layer: 11
   m_Name: CancerLogic
   m_TagString: Untagged
@@ -19078,6 +19081,60 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &580366610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6464543133051132557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d5ed72b94f2214fb31f56d53c9a445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayerCatch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: StopAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &576791479344301658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6464543133051132557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7562785a04b504c9d76bacd9d35ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 3
+  pauseTime: 2
+--- !u!114 &580366611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6464543133051132557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58ce6b89065ab2341af0cddb88f8e14c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionToTweenTowards: {x: -5, y: 0, z: 0}
+  timeToGetThere: 5
 --- !u!1 &6464543133243993067
 GameObject:
   m_ObjectHideFlags: 0
@@ -19087,14 +19144,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6464543133243993064}
-  - component: {fileID: 2009765827}
   m_Layer: 0
   m_Name: CancerMaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6464543133243993064
 Transform:
   m_ObjectHideFlags: 0
@@ -19110,20 +19166,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2009765827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6464543133243993067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58ce6b89065ab2341af0cddb88f8e14c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  positionToTweenTowards: {x: -5, y: 0, z: 0}
-  timeToGetThere: 5
 --- !u!1 &6464543133808478516
 GameObject:
   m_ObjectHideFlags: 0

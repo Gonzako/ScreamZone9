@@ -50,7 +50,7 @@ public class playerSystem : MonoBehaviour
             current.onPlayerDropOff.Invoke();
             result.Add(current);
         }
-
+        o2Pickups.Clear();
         return result;
 
     }
