@@ -8,7 +8,7 @@ public class killPlayerLogic : MonoBehaviour
     public UnityEngine.Events.UnityEvent onPlayerCatch;
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.transform == playerSystem.instance.PlayerVisual)
         {

@@ -7238,6 +7238,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1755644887}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1798287309 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 576791479344301658, guid: c493d71f8371b2845987f056c6d75a68,
+    type: 3}
+  m_PrefabInstance: {fileID: 580366608}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7562785a04b504c9d76bacd9d35ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1823972992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8078,7 +8090,7 @@ PrefabInstance:
     - target: {fileID: 1860552733, guid: fe26148b726e36647bc250bca12dba1f, type: 3}
       propertyPath: onAnyO2Picup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1798287309}
     - target: {fileID: 1860552733, guid: fe26148b726e36647bc250bca12dba1f, type: 3}
       propertyPath: onAnyO2Picup.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: pauseCancer
