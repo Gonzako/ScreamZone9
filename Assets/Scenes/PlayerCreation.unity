@@ -1180,9 +1180,37 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 580366610, guid: c493d71f8371b2845987f056c6d75a68, type: 3}
+      propertyPath: onPlayerCatch.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 580366610, guid: c493d71f8371b2845987f056c6d75a68, type: 3}
       propertyPath: onPlayerCatch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 134383370}
+    - target: {fileID: 580366610, guid: c493d71f8371b2845987f056c6d75a68, type: 3}
+      propertyPath: onPlayerCatch.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 580366610, guid: c493d71f8371b2845987f056c6d75a68, type: 3}
+      propertyPath: onPlayerCatch.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 580366610, guid: c493d71f8371b2845987f056c6d75a68, type: 3}
+      propertyPath: onPlayerCatch.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1004779140}
+    - target: {fileID: 580366610, guid: c493d71f8371b2845987f056c6d75a68, type: 3}
+      propertyPath: onPlayerCatch.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 580366610, guid: c493d71f8371b2845987f056c6d75a68, type: 3}
+      propertyPath: onPlayerCatch.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 580366611, guid: c493d71f8371b2845987f056c6d75a68, type: 3}
+      propertyPath: timeToGetThere
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 576791479344301658, guid: c493d71f8371b2845987f056c6d75a68,
         type: 3}
       propertyPath: velocity
