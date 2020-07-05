@@ -30,6 +30,7 @@ namespace Doozy.Engine
                 if (ApplicationIsQuitting) return null;
                 s_instance = FindObjectOfType<Coroutiner>();
                 if (s_instance == null) s_instance = new GameObject("Coroutiner", typeof(Coroutiner)).GetComponent<Coroutiner>();
+                DontDestroyOnLoad(s_instance);
                 return s_instance;
             }
         }

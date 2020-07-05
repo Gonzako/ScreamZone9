@@ -14,6 +14,10 @@ public class cancerMovementLogic : MonoBehaviour
 
     public void pauseCancer()
     {
+        if (!gameObject.activeInHierarchy)
+            return;
+
+
         if (cor != null)
             StopCoroutine(cor);
 
