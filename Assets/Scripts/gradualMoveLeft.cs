@@ -6,6 +6,7 @@ public class gradualMoveLeft : MonoBehaviour
 {
     public float speed = 1f;
     public bool getUnityEventInstead = false;
+    public float extrabounds = 0f;
 
     public UnityEngine.Events.UnityEvent onLeaveFustrum = null;
 
@@ -35,7 +36,7 @@ public class gradualMoveLeft : MonoBehaviour
         float extents = 2;
         if (rend != null)
             extents = rend.bounds.extents.x;
-        if (transform.position.x < -(screenHalfWidth+extents))
+        if (transform.position.x < -(screenHalfWidth+extents+extrabounds))
         {
             if(!getUnityEventInstead)
                 gameObject.SetActive(false);
