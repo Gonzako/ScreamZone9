@@ -5,12 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class waitThenLoadGamePlay : MonoBehaviour
 {
+    AsyncOperation scene;
 
-    public void loadNextScene()
+    public IEnumerator Start()
     {
-        var asyncScene = SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
-        asyncScene.allowSceneActivation = false;
-        StartCoroutine(enableSceneLater(asyncScene));
+        yield return new WaitForSeconds(0.2f);
+        scene = SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+        scene.allowSceneActivation = false;
+    }
+
+    public void enableSceneAfterWait()
+    {
+        StartCoroutine(enableSceneLater(scene));
     }
 
     public IEnumerator enableSceneLater(AsyncOperation scene)
