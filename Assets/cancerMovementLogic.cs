@@ -22,6 +22,7 @@ public class cancerMovementLogic : MonoBehaviour
             StopCoroutine(cor);
 
         cor = StartCoroutine(lateVelocitySet());
+        MusicManager.instance.moveToTense(false);
     }
 
     private IEnumerator lateVelocitySet()
@@ -30,7 +31,7 @@ public class cancerMovementLogic : MonoBehaviour
         velocity = 0;
 
         yield return new WaitForSeconds(pauseTime);
-
+        MusicManager.instance.moveToTense(true);
         velocity = oldVel;
     }
 
