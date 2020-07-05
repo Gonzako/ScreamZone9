@@ -9825,6 +9825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   getUnityEventInstead: 0
+  extrabounds: 2
   onLeaveFustrum:
     m_PersistentCalls:
       m_Calls: []
